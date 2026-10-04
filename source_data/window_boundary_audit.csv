@@ -1,0 +1,5 @@
+endpoint,n_cycles,window_first_sample,window_last_sample,percent_at_first,percent_at_last,percent_within_1pct_boundary,percent_within_2pct_boundary,flag_substantial_boundary_accumulation
+knee_stance_flex_deg,747,0,50,0.4016064257028112,6.157965194109773,6.5595716198125835,6.827309236947792,False
+knee_swing_flex_deg,747,55,100,0.0,0.0,0.0,0.0,False
+ankle_dorsiflex_deg,747,15,55,0.0,0.4016064257028112,0.9370816599732262,2.2757697456492636,False
+ankle_plantarflex_deg,747,45,75,0.0,0.13386880856760375,0.13386880856760375,0.4016064257028112,False

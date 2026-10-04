@@ -1,0 +1,43 @@
+{
+  "source_sha256": "c5faa8b545127176765b53f88d5551a10721beea760d3893f263a42154656b0a",
+  "n_source_subjects": 20,
+  "excluded_subjects": [
+    "AB18"
+  ],
+  "n_included_subjects": 19,
+  "n_included_windows": 248,
+  "n_excluded_windows": 292,
+  "shape_X": [
+    248,
+    4,
+    101,
+    6
+  ],
+  "shape_T": [
+    248,
+    4
+  ],
+  "duration_s": {
+    "min": 0.8400005102157593,
+    "median": 1.1624994277954102,
+    "max": 1.8599967956542969
+  },
+  "target_mean_sd": {
+    "knee_stance_flex_deg": {
+      "mean": 24.738828659057617,
+      "sd": 8.133769035339355
+    },
+    "knee_swing_flex_deg": {
+      "mean": 66.54026794433594,
+      "sd": 5.670228481292725
+    },
+    "ankle_dorsiflex_deg": {
+      "mean": 23.13782501220703,
+      "sd": 3.5167744159698486
+    },
+    "ankle_plantarflex_deg": {
+      "mean": -5.86954402923584,
+      "sd": 8.363808631896973
+    }
+  }
+}

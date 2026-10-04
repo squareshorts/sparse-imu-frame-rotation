@@ -1,0 +1,17 @@
+test_rotation_deg,method,task,target,mean_delta_baseline_minus_aug10_deg,ci95_low_deg,ci95_high_deg,n_participants
+0.0,gait_functional_calibration,ankle_two,ankle_dorsiflex_deg,0.8042450504365382,0.6577344601947716,0.9576658706794303,138
+0.0,gait_functional_calibration,ankle_two,ankle_plantarflex_deg,0.7765831233991937,0.619141879517849,0.9334793586856655,138
+0.0,gait_functional_calibration,knee_two,knee_stance_flex_deg,1.3282264521288778,1.1279842686630026,1.5366356706196755,138
+0.0,gait_functional_calibration,knee_two,knee_swing_flex_deg,1.1933580868131284,0.9962638268568724,1.3907016472658065,138
+0.0,template_registration,ankle_two,ankle_dorsiflex_deg,0.8421895142615372,0.6860936402904239,1.0144394994349357,138
+0.0,template_registration,ankle_two,ankle_plantarflex_deg,0.767936633550765,0.6111193489949989,0.929033130678318,138
+0.0,template_registration,knee_two,knee_stance_flex_deg,1.0672238673404812,0.8708022787869663,1.271951190737353,138
+0.0,template_registration,knee_two,knee_swing_flex_deg,0.9118752203282638,0.7192531447023085,1.115144901462854,138
+10.0,gait_functional_calibration,ankle_two,ankle_dorsiflex_deg,-0.5120195980965687,-0.7113668167832766,-0.30283640150392255,138
+10.0,gait_functional_calibration,ankle_two,ankle_plantarflex_deg,-0.44483729343197065,-0.6481365299190014,-0.2421065422382032,138
+10.0,gait_functional_calibration,knee_two,knee_stance_flex_deg,-0.09735677225883359,-0.32823249522259906,0.1406322670176538,138
+10.0,gait_functional_calibration,knee_two,knee_swing_flex_deg,-0.005560881994127249,-0.21522639156827075,0.22256438076678478,138
+10.0,template_registration,ankle_two,ankle_dorsiflex_deg,-0.47407508707508195,-0.6782418898698023,-0.26276997204987596,138
+10.0,template_registration,ankle_two,ankle_plantarflex_deg,-0.453483661663186,-0.6634161881846844,-0.23520402418809705,138
+10.0,template_registration,knee_two,knee_stance_flex_deg,-0.35835945286664483,-0.5829928270368953,-0.12370640454465935,138
+10.0,template_registration,knee_two,knee_swing_flex_deg,-0.2870437520281153,-0.5107444293674962,-0.05460796718738264,138

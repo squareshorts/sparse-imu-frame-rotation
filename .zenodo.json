@@ -1,0 +1,36 @@
+﻿{
+    "title":  "Operating Limits of Ridge-Based Sparse IMU Gait Estimation Under Sensor-Frame Rotation",
+    "description":  "Reproducibility archive for IEEE Sensors Journal manuscript Sensors-113886-2026, including final analysis code, source tables, figure-generation scripts, and completed reviewer-requested sensitivity analyses.",
+    "creators":  [
+                     {
+                         "name":  "Sergio de N. R. L. Jr.",
+                         "affiliation":  "Federal University of Para"
+                     },
+                     {
+                         "name":  "Marlon Malheiros",
+                         "affiliation":  "Federal University of Para"
+                     },
+                     {
+                         "name":  "Ronaldo de F. Zampolo",
+                         "affiliation":  "Federal University of Para"
+                     },
+                     {
+                         "name":  "Antonio Pereira",
+                         "affiliation":  "Federal University of Para"
+                     }
+                 ],
+    "access_right":  "open",
+    "upload_type":  "software",
+    "keywords":  [
+                     "IMU",
+                     "gait analysis",
+                     "sensor orientation",
+                     "coordinate-frame rotation",
+                     "wearable sensors",
+                     "data augmentation",
+                     "frame normalization"
+                 ],
+    "license":  "mit",
+    "version":  "1.0.0",
+    "language":  "eng"
+}

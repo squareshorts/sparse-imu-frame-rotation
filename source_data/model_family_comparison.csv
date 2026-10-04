@@ -1,0 +1,13 @@
+family,task,target,rmse,mae,n_subjects
+histgb,ankle_two,ankle_dorsiflex_deg,1.8700472783783209,1.642137183767298,138
+histgb,ankle_two,ankle_plantarflex_deg,2.558006456580715,2.226166815645453,138
+histgb,knee_two,knee_stance_flex_deg,2.1737689860705016,1.9010100880826728,138
+histgb,knee_two,knee_swing_flex_deg,2.72375012545482,2.397384505772936,138
+ridge,ankle_two,ankle_dorsiflex_deg,0.892451141299545,0.7605288890392884,138
+ridge,ankle_two,ankle_plantarflex_deg,1.1812296298373004,0.9621702817039214,138
+ridge,knee_two,knee_stance_flex_deg,1.2604403086546538,1.0952252266199691,138
+ridge,knee_two,knee_swing_flex_deg,1.397458048078461,1.2118733086879705,138
+tcn,ankle_two,ankle_dorsiflex_deg,0.834010051212449,0.7429683067012525,138
+tcn,ankle_two,ankle_plantarflex_deg,1.218009022158989,1.0604654877730038,138
+tcn,knee_two,knee_stance_flex_deg,1.4936515911333803,1.27957865703797,138
+tcn,knee_two,knee_swing_flex_deg,1.8820465610942976,1.6699597250292266,138

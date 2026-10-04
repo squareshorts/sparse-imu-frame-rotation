@@ -1,0 +1,2 @@
+scope,outer_fold,n_participants,age_mean,age_sd,age_median,age_min,age_max,n_female,n_male,n_missing_sex,cycles_median,cycles_iqr_low,cycles_iqr_high,cycles_min,cycles_max,walking_speed_mean,walking_speed_sd
+cohort,,138,51.77016429790247,19.850232593048112,51.07017940135663,20.356338596959556,86.4083451405573,75,60,3,5.0,4.0,7.0,1,11,1.2172451648913136,0.1691309047784626

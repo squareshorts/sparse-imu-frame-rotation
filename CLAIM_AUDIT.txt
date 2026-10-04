@@ -1,0 +1,16 @@
+CLAIM AUDIT: PASS
+- Virtual clean RMSE: 0.89-1.40 deg
+- Virtual 10-deg unaugmented: 8.08-8.24 deg RMSE
+- Virtual 10-deg matched augmentation: 3.66-4.27 deg RMSE; worst upper CI 4.456 deg
+- Virtual operating rule: 10-deg cap qualifies through 10 deg; no cap qualifies through 12.5 or 15 deg
+- Virtual matched-augmentation rescue: 4.46, 4.38, 3.87, 3.91 deg; all paired CIs > 0
+- Virtual clean penalty for 10-deg augmentation: 1.46-1.59 deg
+- Virtual template registration at 10 deg: 3.19-3.92 deg RMSE
+- Virtual template vs aug10 trade-off: template worse at 0 deg, better at 10 deg for all four endpoints
+- Virtual perturbation decomposition: common-mode 10-deg change <1 deg; independent two-sensor change 6.81-7.15 deg
+- Relative-frame geometry: 10-deg per-sensor pair angle mean 13.317 deg, 97.5th percentile 19.745 deg, max ~20 deg
+- External unaugmented 10-deg degradation: 0.382, 0.482, 0.663, 0.671 deg; all paired CIs > 0
+- External matched 10-deg augmentation: improves 3/4 endpoints with CI excluding zero
+- External template registration vs unaugmented at 10 deg: improves all 4 endpoints; all paired CIs > 0
+- External template vs aug10: only knee swing has a clear template advantage: 0.536 deg, CI 0.031-1.288
+- External template invariance: max signal discrepancy 1.91e-06
