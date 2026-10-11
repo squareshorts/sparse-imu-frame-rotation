@@ -4,10 +4,12 @@ This directory contains the code used for the corrected orientation-robustness a
 
 ## Primary virtual-IMU analysis
 
-Required inputs, not redistributed here:
+Required inputs:
 
-- `data/processed/strict_parameters.npz`, derived from the public Van Criekinge et al. source dataset.
-- `protocol/outer_folds.csv`, included here.
+- `data/processed/strict_parameters.npz`, the frozen derived input from the public Van Criekinge et al. source dataset. The exact verified frozen NPZ is included in v1.0.1. See top-level `DATA_PROVENANCE.md`.
+- `protocol/outer_folds.csv`, included in this archive. Its SHA-256 is fixed by the original confirmatory protocol.
+
+Run `python scripts/verify_processed_input.py` from the repository root before fitting any models. This hash-verification step distinguishes reproducing models from reproducing preprocessing.
 
 The corrected full matrix uses participant-disjoint outer folds, five weight-normalized augmented copies plus the clean cycle, cap-specific Ridge penalties, 50 Monte Carlo test rotations for each nonzero condition, and participant RMSE computed by pooling squared errors across cycles and Monte Carlo realizations before taking the square root.
 

@@ -1,36 +1,37 @@
 {
-    "title":  "Operating Limits of Ridge-Based Sparse IMU Gait Estimation Under Sensor-Frame Rotation",
-    "description":  "Reproducibility archive for IEEE Sensors Journal manuscript Sensors-113886-2026, including final analysis code, source tables, figure-generation scripts, and completed reviewer-requested sensitivity analyses.",
-    "creators":  [
-                     {
-                         "name":  "Sergio de N. R. L. Jr.",
-                         "affiliation":  "Federal University of Para"
-                     },
-                     {
-                         "name":  "Marlon Malheiros",
-                         "affiliation":  "Federal University of Para"
-                     },
-                     {
-                         "name":  "Ronaldo de F. Zampolo",
-                         "affiliation":  "Federal University of Para"
-                     },
-                     {
-                         "name":  "Antonio Pereira",
-                         "affiliation":  "Federal University of Para"
-                     }
-                 ],
-    "access_right":  "open",
-    "upload_type":  "software",
-    "keywords":  [
-                     "IMU",
-                     "gait analysis",
-                     "sensor orientation",
-                     "coordinate-frame rotation",
-                     "wearable sensors",
-                     "data augmentation",
-                     "frame normalization"
-                 ],
-    "license":  "mit",
-    "version":  "1.0.0",
-    "language":  "eng"
+  "title": "Operating Limits of Ridge-Based Sparse IMU Gait Estimation Under Sensor-Frame Rotation",
+  "description": "v1.0.1 reproducibility archive for IEEE Sensors Journal manuscript Sensors-113886-2026. Includes the exact hash-verified derived virtual-IMU NPZ, portable model code, all 5 participant-disjoint fold reruns, participant-level RMSE outputs, and reviewer-requested virtual sensitivity analyses. Raw C3D-to-NPZ reconstruction and physical HDF5 re-execution are not claimed.",
+  "creators": [
+    {
+      "name": "Sergio de N. R. L. Jr.",
+      "affiliation": "Federal University of Para"
+    },
+    {
+      "name": "Marlon Malheiros",
+      "affiliation": "Federal University of Para"
+    },
+    {
+      "name": "Ronaldo de F. Zampolo",
+      "affiliation": "Federal University of Para"
+    },
+    {
+      "name": "Antonio Pereira",
+      "affiliation": "Federal University of Para"
+    }
+  ],
+  "access_right": "open",
+  "upload_type": "software",
+  "keywords": [
+    "IMU",
+    "gait analysis",
+    "sensor orientation",
+    "coordinate-frame rotation",
+    "wearable sensors",
+    "data augmentation",
+    "frame normalization",
+    "reproducibility"
+  ],
+  "license": "mit",
+  "version": "1.0.1",
+  "language": "eng"
 }

@@ -19,7 +19,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 ROOT = Path(__file__).resolve().parents[2]
-FINAL_CODE = ROOT / "submitted_final/analysis/analysis_code"
+FINAL_CODE = ROOT / "analysis_code"
 sys.dont_write_bytecode = True  # Keep the submitted source tree unchanged.
 sys.path.insert(0, str(FINAL_CODE))
 
@@ -38,7 +38,7 @@ from strengthening.run_orientation_baselines_fold import (  # noqa: E402
 )
 
 
-OUT = ROOT / "results/revision_2026_10"
+OUT = ROOT / "revision_analysis/results"
 SEED = 20260907
 SUBSET_SEED_OFFSET = 30_000_000
 BOOT_SEED_OFFSET = 40_000_000
@@ -93,7 +93,7 @@ class WeightedRidge:
 
 def load_inputs(cohort: str) -> InputData:
     if cohort == "virtual":
-        d = load_study_data(ROOT / "data/processed/strict_parameters.npz")
+        d = load_study_data(ROOT / "analysis_code/data/processed/strict_parameters.npz")
         folds = load_outer_folds(FINAL_CODE / "protocol/outer_folds.csv", d.subjects)
         if (len(d.subjects), len(np.unique(d.subjects))) != (747, 138):
             raise RuntimeError("Virtual cohort does not match final 747-cycle analysis")

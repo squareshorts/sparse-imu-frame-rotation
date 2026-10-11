@@ -7,8 +7,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / "submitted_final/analysis/source_data"
-OUT = ROOT / "results/revision_2026_10/physical_zero_rotation.csv"
+SOURCE = ROOT / "source_data"
+OUT = ROOT / "revision_analysis/results/physical_zero_rotation.csv"
 TARGETS = (
     ("ankle_two", "ankle_dorsiflex_deg"),
     ("ankle_two", "ankle_plantarflex_deg"),
@@ -69,8 +69,8 @@ def main() -> None:
             "all_endpoint_4p5_criterion_at_0_deg": str(worst0 <= CRITERION).lower(),
             "worst_upper_ci_10_deg_all_endpoints": worst10,
             "all_endpoint_4p5_criterion_at_10_deg": str(worst10 <= CRITERION).lower(),
-            "source_matrix": "submitted_final/analysis/source_data/external_rotation_matrix_summary.csv",
-            "source_paired": "submitted_final/analysis/source_data/external_unaugmented_degradation.csv",
+            "source_matrix": "source_data/external_rotation_matrix_summary.csv",
+            "source_paired": "source_data/external_unaugmented_degradation.csv",
         })
 
     OUT.parent.mkdir(parents=True, exist_ok=True)

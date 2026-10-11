@@ -1,0 +1,138 @@
+{
+  "date_utc": "2026-10-10",
+  "model_level": "reproduced from recovered exact frozen NPZ using archived code and five participant-disjoint folds",
+  "raw_c3d_to_npz": "NOT reproduced; exploratory original conversion source unavailable",
+  "physical_camargo_hdf5": "NOT rerun in this package; old source tables and preparation scripts remain available",
+  "input_sha256": "f75bc8ca9c9cad0a6d4b853b7fd55d3637e5a485dbfdb9f27fa18405cdd2db9e",
+  "fold_sha256": "8aaf78f5c51f0e5d28d88e17c1bbbb0563fdeb7cc09d3e39fe666d03972ca782",
+  "checks": {
+    "rotation_matrix": {
+      "rows": 196,
+      "max_differences": {
+        "mean_participant_rmse_deg": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      },
+      "largest_numeric_difference": 0.0
+    },
+    "normalization": {
+      "rows": 56,
+      "max_differences": {
+        "mean_participant_rmse_deg": 0.0,
+        "ci95_low_deg": 0.0,
+        "ci95_high_deg": 0.0
+      },
+      "largest_numeric_difference": 0.0
+    },
+    "augmentation_copy": {
+      "rows": 32,
+      "max_differences": {
+        "mean_participant_rmse_deg": 1.6809557195074376e-06,
+        "ci_low": 1.768318572015204e-06,
+        "ci_high": 2.6506149120031353e-06
+      },
+      "largest_numeric_difference": 2.6506149120031353e-06
+    },
+    "calibration_size": {
+      "rows": 80,
+      "max_differences": {
+        "mean_participant_rmse_deg": 1.6445800512521203e-06,
+        "ci95_low_deg": 2.531305804520656e-06,
+        "ci95_high_deg": 3.8868833716065865e-06
+      },
+      "largest_numeric_difference": 3.8868833716065865e-06
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0",
+    "h5py": "3.15.1",
+    "matplotlib": "3.10.8"
+  },
+  "arrays": {
+    "X": {
+      "shape": [
+        747,
+        4,
+        101,
+        6
+      ],
+      "dtype": "float32"
+    },
+    "Y": {
+      "shape": [
+        747,
+        101,
+        4
+      ],
+      "dtype": "float32"
+    },
+    "T": {
+      "shape": [
+        747,
+        9
+      ],
+      "dtype": "float32"
+    },
+    "subjects": {
+      "shape": [
+        747
+      ],
+      "dtype": "int64"
+    },
+    "ages": {
+      "shape": [
+        747
+      ],
+      "dtype": "float64"
+    },
+    "durations": {
+      "shape": [
+        747
+      ],
+      "dtype": "float64"
+    },
+    "speeds": {
+      "shape": [
+        747
+      ],
+      "dtype": "float64"
+    },
+    "sides": {
+      "shape": [
+        747
+      ],
+      "dtype": "<U1"
+    },
+    "trials": {
+      "shape": [
+        747
+      ],
+      "dtype": "<U15"
+    },
+    "targets": {
+      "shape": [
+        9
+      ],
+      "dtype": "<U25"
+    },
+    "contacts": {
+      "shape": [
+        747,
+        4
+      ],
+      "dtype": "int64"
+    }
+  },
+  "matrix_fits": 70,
+  "comparison_tolerance_primary_deg": 0.005,
+  "provenance_note": "Archived CSV values retained unchanged in v1.0.0 paths; reproduction outputs stored separately.",
+  "calibration_size_replay_scope": {
+    "virtual_summary_cells_independently_recomputed": 32,
+    "physical_summary_cells_kept_from_v1.0.0": 48,
+    "combined_summary_rows_checked": 80
+  }
+}

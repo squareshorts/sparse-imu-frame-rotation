@@ -16,8 +16,8 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / "submitted_final/analysis/source_data"
-FIG = ROOT / "results/revision_2026_10/figures"
+SOURCE = ROOT / "source_data"
+FIG = ROOT / "revision_analysis/figures"
 
 mpl.rcParams.update({
     "font.family": "DejaVu Sans",

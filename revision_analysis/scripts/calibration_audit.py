@@ -13,29 +13,36 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "results/revision_2026_10/calibration_audit.csv"
-VIRTUAL = ROOT / "data/processed/strict_parameters.npz"
-PHYSICAL_QC = ROOT / (
-    "submitted_final/analysis/analysis_code/strengthening/"
-    "camargo_external/qc_windows.csv"
-)
+OUT = ROOT / "revision_analysis/results/calibration_audit.csv"
+VIRTUAL = ROOT / "analysis_code/data/processed/strict_parameters.npz"
+PHYSICAL_QC = ROOT / "analysis_code/strengthening/camargo_external/qc_windows.csv"
 VIRTUAL_RUNNER = (
-    "submitted_final/analysis/analysis_code/strengthening/"
+    "analysis_code/strengthening/"
     "run_orientation_baselines_v2.py"
 )
 PHYSICAL_RUNNER = (
-    "submitted_final/analysis/analysis_code/strengthening/"
+    "analysis_code/strengthening/"
     "camargo_external/run_camargo_baselines_v3_pooled_fold.py"
 )
 TRANSFORMS = (
-    "submitted_final/analysis/analysis_code/strengthening/"
+    "analysis_code/strengthening/"
     "run_orientation_baselines_fold.py"
 )
 
 
 def main() -> None:
-    with np.load(VIRTUAL, allow_pickle=True) as z:
-        virtual_subjects = z["subjects"]
+    if VIRTUAL.is_file():
+        with np.load(VIRTUAL, allow_pickle=True) as z:
+            virtual_subjects = z["subjects"]
+        virtual_source = VIRTUAL
+    else:
+        # Exact cycle/subject manifest was archived with the frozen analysis.
+        # This fallback audits calibration group *sizes*, not signal values.
+        manifest = ROOT / "analysis_code/protocol/outer_folds.csv"
+        f = pd.read_csv(manifest)
+        assert len(f) == 747 and f.cycle_index.tolist() == list(range(747))
+        virtual_subjects = f.subject.to_numpy()
+        virtual_source = manifest
     _, virtual_counts = np.unique(virtual_subjects, return_counts=True)
 
     qc = pd.read_csv(PHYSICAL_QC)
@@ -49,7 +56,7 @@ def main() -> None:
 
     rows = []
     for cohort, unit, counts, input_path, runner in (
-        ("virtual", "cycle", virtual_counts, VIRTUAL, VIRTUAL_RUNNER),
+        ("virtual", "cycle", virtual_counts, virtual_source, VIRTUAL_RUNNER),
         ("physical_camargo", "window", physical_counts, PHYSICAL_QC, PHYSICAL_RUNNER),
     ):
         for method in ("template_registration", "gait_functional_calibration"):

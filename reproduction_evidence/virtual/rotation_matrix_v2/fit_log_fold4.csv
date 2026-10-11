@@ -1,0 +1,15 @@
+outer_fold,task,train_augmentation_max_deg,alpha,n_training_rows,total_training_weight,feature_dim
+4,knee_two,0.0,10.0,597,597.0,330
+4,knee_two,2.5,10.0,3582,597.0,330
+4,knee_two,5.0,100.0,3582,597.0,330
+4,knee_two,7.5,100.0,3582,597.0,330
+4,knee_two,10.0,100.0,3582,597.0,330
+4,knee_two,12.5,100.0,3582,597.0,330
+4,knee_two,15.0,100.0,3582,597.0,330
+4,ankle_two,0.0,10.0,597,597.0,330
+4,ankle_two,2.5,10.0,3582,597.0,330
+4,ankle_two,5.0,100.0,3582,597.0,330
+4,ankle_two,7.5,100.0,3582,597.0,330
+4,ankle_two,10.0,100.0,3582,597.0,330
+4,ankle_two,12.5,100.0,3582,597.0,330
+4,ankle_two,15.0,100.0,3582,597.0,330

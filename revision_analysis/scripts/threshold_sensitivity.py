@@ -12,9 +12,9 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / "submitted_final/analysis/source_data/virtual_rotation_matrix_summary.csv"
-BASELINE = ROOT / "submitted_final/analysis/source_data/virtual_deployment_rule.csv"
-OUTPUT = ROOT / "results/revision_2026_10/threshold_sensitivity.csv"
+SOURCE = ROOT / "source_data/virtual_rotation_matrix_summary.csv"
+BASELINE = ROOT / "source_data/virtual_deployment_rule.csv"
+OUTPUT = ROOT / "revision_analysis/results/threshold_sensitivity.csv"
 CEILINGS = (4.0, 4.5, 5.0)
 ENDPOINTS = {
     ("ankle_two", "ankle_dorsiflex_deg"),

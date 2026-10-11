@@ -1,6 +1,6 @@
 """Nested-copy Ridge sensitivity using the submitted virtual protocol.
 
-Writes only to results/revision_2026_10. The submitted five-copy result is
+Writes only to revision_analysis/results/. The submitted five-copy result is
 checked against source_data/virtual_rotation_matrix_summary.csv before output.
 """
 from __future__ import annotations
@@ -15,7 +15,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 ROOT = Path(__file__).resolve().parents[2]
-FINAL = ROOT / "submitted_final" / "analysis"
+FINAL = ROOT
 sys.path.insert(0, str(FINAL / "analysis_code"))
 from src.confirmatory.constants import PRIMARY_TASKS  # noqa: E402
 from src.confirmatory.data import load_study_data  # noqa: E402
@@ -26,7 +26,7 @@ from src.confirmatory.orientation import (  # noqa: E402
     perturb_by_subject,
 )
 
-OUT = ROOT / "results" / "revision_2026_10"
+OUT = ROOT / "revision_analysis" / "results"
 SEED = 20260907
 MC = 50
 BOOT = 5000
@@ -65,7 +65,7 @@ def bootstrap_mean(values: np.ndarray, seed: int) -> tuple[float, float, float]:
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    d = load_study_data(ROOT / "data" / "processed" / "strict_parameters.npz")
+    d = load_study_data(ROOT / "analysis_code" / "data" / "processed" / "strict_parameters.npz")
     outer = load_outer_folds(FINAL / "analysis_code" / "protocol" / "outer_folds.csv", d.subjects)
     submitted = pd.read_csv(FINAL / "source_data" / "virtual_rotation_matrix_summary.csv")
     assert d.n_subjects == 138 and d.n_cycles == 747
