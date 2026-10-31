@@ -55,11 +55,19 @@ Both template registration and gait-functional calibration were evaluated using 
 
 Individual paired participant-bootstrap 95% intervals exclude zero for these contrasts (not adjusted for multiplicity). The same mean differences appear at 10 degrees due to numerical invariance to imposed coordinate rotation. This design removes the changing-participant and changing-evaluation-set confounds from the previous calibration-size comparison; it does not test calibration generalization across speeds, tasks, or remounting conditions.
 
-## External physical-IMU protocol audit
+## Completed external physical-IMU model rerun (31 October 2026)
 
-The archived source manifest has **540** Camargo source windows, **248 included windows** from **19 participants** (9-15 included windows per participant), **262** windows excluded for turning, and **30** from excluded participant AB18. There are no duplicate subject/window IDs in the manifest. Source-code inspection confirms that models were **refitted on the physical training participants**, transferring only Ridge regularization from the virtual study. The preparation code sets the physical walking-speed feature to constant zero. The physical cohort's baseline RMSEs are higher than those of the virtual cohort, so the virtual 4.5-degree threshold cannot be directly imposed on the physical evaluation.
+The original public Stanford Camargo HDF5 file (23,347,200 bytes; SHA-256 `c5faa8b545127176765b53f88d5551a10721beea760d3893f263a42154656b0a`) was supplied and verified. The frozen preprocessing procedure recovered 248 windows from 19 participants. All 540 QC rows matched the archived source values, including 262 windows excluded for turning and 30 windows from excluded participant AB18. Five-fold participant-disjoint physical Ridge refits reproduced all 196 original rotation-matrix mean/CI cells within 0.0000381 degrees and all 56 orientation-normalization summary cells exactly. Only selected Ridge penalties were transferred from the virtual analysis; fitted coefficients were regenerated within each physical training fold.
 
-The raw file `Camargo_levelground.h5` was **not included** in the supplied ZIP. Consequently, three tests could not be performed: source-HDF5 checksum verification and raw-window overlap checking; independent execution of the physical-cohort model on the prepared tensor; and the physical-cohort common-subject/common-window calibration comparison. No physical signal or participant values have been imputed.
+At an imposed 10-degree frame rotation, physical unaugmented mean RMSE increases were 0.382, 0.482, 0.663 and 0.671 degrees for ankle dorsiflexion, ankle plantarflexion, knee stance flexion and knee swing flexion. Corresponding virtual increases were approximately 6.68-7.23 degrees. Physical zero-rotation baseline RMSE ranged from 4.15 to 5.90 degrees. The virtual 4.5-degree operating rule does not transfer to the physical dataset.
+
+The HDF5 field named `treadmill_speed` contains the constant value -1 for all retained samples. It cannot supply a meaningful walking-speed covariate. The physical accelerometer-vector norms are approximately 1.06-1.13 in source units, compared with 10.88-12.74 for the virtual accelerations; this pattern is compatible with different raw acceleration unit conventions. Directional features undergo training-fold standardization. The source-representation, reference-kinematics, and cohort differences have not been independently decomposed into causal explanations for the discrepant rotation effects.
+
+## Matched physical calibration and raw-window overlap
+
+Calibration-size comparisons were rerun with identical scoring windows and participants at one, three, and five calibration windows. A raw-sample audit detected exactly one pair with repeated content: AB25 source windows 0 and 1 share 31 consecutive IMU samples. Window 1 enters three- and five-window calibration; window 0 would be scored. Excluding window 0 from scoring at all calibration sizes leaves 19 participants and the same 152 scored windows across the comparison conditions. The maximum change in any of 32 paired mean calibration contrasts after exclusion was 0.0004204 degrees.
+
+With the overlap-safe sample, functional-frame calibration from one to three windows improved ankle plantarflexion RMSE by 1.064 degrees (95% participant-bootstrap CI of the change: -2.367 to -0.022 degrees) and knee swing flexion RMSE by 0.595 degrees (CI -1.254 to -0.031 degrees). Additional functional calibration from three to five windows improved ankle plantarflexion by 0.129 degrees (CI -0.304 to -0.012 degrees). Remaining individual contrasts included zero in their intervals. Intervals were not corrected for multiple comparisons. Template registration did not show consistent improvements as its calibration set grew. These recordings reflect one walking condition and do not establish cross-condition calibration robustness.
 
 ## Implications for manuscript revision
 
@@ -67,16 +75,16 @@ The raw file `Camargo_levelground.h5` was **not included** in the supplied ZIP. 
 2. Describe 7.5 degrees as the largest tested magnitude consistently satisfying the **internal** numerical rule across these sensitivity repetitions, while retaining the original result as an observed initial configuration.
 3. Incorporate the walking-speed ablation as evidence that speed availability contributes little to the virtual/physical discrepancy within the virtual pipeline; keep the cause of that discrepancy unresolved.
 4. Incorporate the matched virtual calibration-size contrasts. Explain the calibration time/condition requirements and distinguish frame-rotation invariance from anatomical frame recovery.
-5. Explicitly state the external physical-model refitting procedure and report the raw physical data analyses as incomplete until the source HDF5 is obtained.
+5. State the physical-cohort refitting procedure explicitly. Incorporate the completed Camargo reproduction, paired calibration results, and observed within-participant raw-window overlap.
 6. Do not represent repeated folds of the previously examined virtual cohort as untouched independent confirmation. A new independent cohort or a substantially more limited operating claim is required to address selection uncertainty.
 
 ## Contents
 
-- `MANIFEST.json` records the authenticated data hash, reference reproduction, analysis counts, and missing physical HDF5.
+- `MANIFEST.json` in the downloadable complete archive records both authenticated datasets, reproduction checks, and the physical overlap sensitivity.
 - `tables/stability_decisions.csv`, `stability_pass_fractions.csv`, `stability_endpoint_summary.csv`, and `stability_participant_rmse.csv` record the complete 13-scenario internal robustness evidence (35,880 participant-level scenario/angle/endpoint observations).
 - `tables/speed_*` and `calibration_common_virtual_*` preserve the two new paired analyses and their participant-level products.
-- `tables/physical_*`, `virtual_physical_relative_changes.csv`, and `virtual_sensor_characteristics.csv` document the source-available physical audit and sensor comparisons.
-- `code/` contains the exact Python execution scripts; `logs/` contains the successful-run logs. The aborted all-in-one execution and its incomplete intermediate tables are deliberately **excluded**.
+- `physical_camargo/` publishes the completed physical refit, raw-window audit and overlap-safe calibration summaries. The complete downloadable archive additionally includes participant-level products and execution logs.
+- The complete downloadable analysis archive contains the exact Python execution scripts and successful-run logs. No original HDF5 data are redistributed in GitHub.
 
 ## Cleanup
 
