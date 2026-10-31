@@ -1,0 +1,14 @@
+scenario,regime,include_speed,n_test_angles,worst_upper_ci_deg,margin_to_4p5_deg,passes_evaluated_angles_4p5,complete_0_to_10_envelope,n_participants,fold_fingerprint,kind,index,max_consistently_passing_angle_deg,worst_10_degree_endpoint,worst_upper_ci_through_7p5_deg
+augmentation_seed_01,aug10,True,5,4.4900532355598095,0.0099467644401904,True,True,138,278327d7c6a23f7b,seed,1,10.0,knee_stance_flex_deg,3.959944693613196
+augmentation_seed_02,aug10,True,5,4.4622302704481065,0.0377697295518935,True,True,138,278327d7c6a23f7b,seed,2,10.0,knee_stance_flex_deg,3.9626038822466745
+augmentation_seed_03,aug10,True,5,4.513384645950247,-0.0133846459502473,False,True,138,278327d7c6a23f7b,seed,3,7.5,knee_stance_flex_deg,3.98922822030182
+augmentation_seed_04,aug10,True,5,4.481888409474234,0.0181115905257662,True,True,138,278327d7c6a23f7b,seed,4,10.0,knee_stance_flex_deg,3.974688040046898
+augmentation_seed_05,aug10,True,5,4.4561605484261815,0.0438394515738185,True,True,138,278327d7c6a23f7b,seed,5,10.0,knee_stance_flex_deg,3.969225790831118
+augmentation_seed_06,aug10,True,5,4.529864164937902,-0.0298641649379023,False,True,138,278327d7c6a23f7b,seed,6,7.5,knee_stance_flex_deg,4.016071393080784
+augmentation_seed_07,aug10,True,5,4.470185436425241,0.0298145635747593,True,True,138,278327d7c6a23f7b,seed,7,10.0,knee_stance_flex_deg,3.96292851358302
+augmentation_seed_08,aug10,True,5,4.510972729443146,-0.0109727294431456,False,True,138,278327d7c6a23f7b,seed,8,7.5,knee_stance_flex_deg,3.9961723374060063
+alternative_partition_01,aug10,True,5,4.518519100034154,-0.0185191000341538,False,True,138,edf6916c62c70096,partition,1,7.5,knee_stance_flex_deg,4.040185059321634
+alternative_partition_02,aug10,True,5,4.604428137531788,-0.1044281375317881,False,True,138,775c768154321716,partition,2,7.5,knee_stance_flex_deg,4.174018626466903
+alternative_partition_03,aug10,True,5,4.514770830957587,-0.0147708309575866,False,True,138,77b6730ca53a610b,partition,3,7.5,knee_stance_flex_deg,4.025997767988616
+alternative_partition_04,aug10,True,5,4.531629140804605,-0.0316291408046049,False,True,138,0d5eedc48e770634,partition,4,7.5,knee_stance_flex_deg,4.081004492566145
+alternative_partition_05,aug10,True,5,4.518289899196044,-0.018289899196044,False,True,138,678b585634415e17,partition,5,7.5,knee_swing_flex_deg,4.089929475361473
