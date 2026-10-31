@@ -1,0 +1,2 @@
+subject,source_window_a,source_window_b,max_exact_contiguous_samples,total_exact_samples_at_shift,sample_offset_b_minus_a
+AB25,0,1,31,31,-97
