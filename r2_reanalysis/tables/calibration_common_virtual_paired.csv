@@ -1,0 +1,17 @@
+cohort,method,task,target,test_rotation_deg,smaller_calibration_k,larger_calibration_k,n_common_participants,mean_larger_minus_smaller_rmse_deg,ci95_low_deg,ci95_high_deg
+virtual,gait_functional_calibration,ankle_two,ankle_dorsiflex_deg,0.0,1,3,113,-0.3324344307872507,-0.5607489821291899,-0.1206047450458754
+virtual,gait_functional_calibration,ankle_two,ankle_dorsiflex_deg,10.0,1,3,113,-0.3324344663506742,-0.5558856015530187,-0.1249529239959474
+virtual,gait_functional_calibration,ankle_two,ankle_plantarflex_deg,0.0,1,3,113,-0.3463072400969126,-0.6590955289053245,-0.066204016408053
+virtual,gait_functional_calibration,ankle_two,ankle_plantarflex_deg,10.0,1,3,113,-0.34630719763496276,-0.6535033168784005,-0.05535692601826811
+virtual,gait_functional_calibration,knee_two,knee_stance_flex_deg,0.0,1,3,113,-0.2513290659234511,-0.48580232817323565,-0.018032371980350872
+virtual,gait_functional_calibration,knee_two,knee_stance_flex_deg,10.0,1,3,113,-0.25132923333024965,-0.48815534708846636,-0.015161590044265172
+virtual,gait_functional_calibration,knee_two,knee_swing_flex_deg,0.0,1,3,113,-0.4469528891187731,-0.7084851440242929,-0.18401339495666305
+virtual,gait_functional_calibration,knee_two,knee_swing_flex_deg,10.0,1,3,113,-0.44695304392900886,-0.704054240134958,-0.18450795812790038
+virtual,template_registration,ankle_two,ankle_dorsiflex_deg,0.0,1,3,113,-0.3563460907100092,-0.5696550159916199,-0.14463771027742509
+virtual,template_registration,ankle_two,ankle_dorsiflex_deg,10.0,1,3,113,-0.3563458143159111,-0.5754142639732727,-0.14635202886586784
+virtual,template_registration,ankle_two,ankle_plantarflex_deg,0.0,1,3,113,-0.3369374579187653,-0.581406000330929,-0.10033130760969232
+virtual,template_registration,ankle_two,ankle_plantarflex_deg,10.0,1,3,113,-0.3369373370042044,-0.5970412204936489,-0.1043317702842412
+virtual,template_registration,knee_two,knee_stance_flex_deg,0.0,1,3,113,-0.3013986697045021,-0.5841635690471831,-0.025661440267342538
+virtual,template_registration,knee_two,knee_stance_flex_deg,10.0,1,3,113,-0.3013986716895452,-0.571959320224864,-0.027424406081984907
+virtual,template_registration,knee_two,knee_swing_flex_deg,0.0,1,3,113,-0.29196590620066176,-0.5616309892909683,-0.040849215855464034
+virtual,template_registration,knee_two,knee_swing_flex_deg,10.0,1,3,113,-0.2919657241974983,-0.557091457488636,-0.03312594828435846
