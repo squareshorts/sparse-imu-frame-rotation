@@ -1,37 +1,37 @@
 {
-  "title": "Operating Limits of Ridge-Based Sparse IMU Gait Estimation Under Sensor-Frame Rotation",
-  "description": "v1.0.1 reproducibility archive for IEEE Sensors Journal manuscript Sensors-113886-2026. Includes the exact hash-verified derived virtual-IMU NPZ, portable model code, all 5 participant-disjoint fold reruns, participant-level RMSE outputs, and reviewer-requested virtual sensitivity analyses. Raw C3D-to-NPZ reconstruction and physical HDF5 re-execution are not claimed.",
+  "title": "Direction-Dependent Rotation Error and Calibration Trade-offs in Sparse-IMU Gait Estimation",
+  "description": "Version 1.1.1 reproducibility record for sparse-IMU gait estimation under imposed sensor-frame rotations. Includes the frozen virtual-IMU derived dataset (747 gait cycles, 138 participants), participant-disjoint Ridge analysis source and original reproduction outputs, summary tables from external Camargo physical-IMU analysis (248 windows, 19 participants), and numerical findings on rotation-axis sensitivity, physical-specific regularization, and recalibration. Late-stage execution archives containing code and detailed intermediate results must be committed to r2_reanalysis/artifacts before the v1.1.1 GitHub release is published. Raw Camargo HDF5 and original C3D data are not redistributed. The results address imposed coordinate-frame rotations, not validated physical IMU remounting.",
   "creators": [
     {
-      "name": "Sergio de N. R. L. Jr.",
-      "affiliation": "Federal University of Para"
+      "name": "Lima Júnior, Sérgio de Nazaré Rodrigues",
+      "affiliation": "Federal University of Pará"
     },
     {
-      "name": "Marlon Malheiros",
-      "affiliation": "Federal University of Para"
+      "name": "Malheiros, Marlon",
+      "affiliation": "Federal University of Pará"
     },
     {
-      "name": "Ronaldo de F. Zampolo",
-      "affiliation": "Federal University of Para"
+      "name": "Zampolo, Ronaldo de Freitas",
+      "affiliation": "Federal University of Pará"
     },
     {
-      "name": "Antonio Pereira",
-      "affiliation": "Federal University of Para"
+      "name": "Pereira, Antonio",
+      "affiliation": "Federal University of Pará"
     }
   ],
   "access_right": "open",
   "upload_type": "software",
   "keywords": [
-    "IMU",
-    "gait analysis",
-    "sensor orientation",
-    "coordinate-frame rotation",
-    "wearable sensors",
-    "data augmentation",
-    "frame normalization",
+    "gait kinematics",
+    "inertial measurement units",
+    "sensor-frame rotation",
+    "directional sensitivity",
+    "Ridge regression",
+    "frame calibration",
+    "wearable measurement",
     "reproducibility"
   ],
   "license": "mit",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "language": "eng"
 }
