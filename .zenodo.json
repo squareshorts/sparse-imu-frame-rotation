@@ -1,6 +1,6 @@
 {
   "title": "Direction-Dependent Rotation Error and Calibration Trade-offs in Sparse-IMU Gait Estimation",
-  "description": "Reproducibility archive for the study of direction-dependent sensor-frame rotation error and calibration trade-offs in sparse-IMU gait estimation. It contains the frozen derived virtual-IMU dataset (747 gait cycles; 138 participants), original Ridge model code and reproduction evidence, external Camargo physical-IMU result summaries (248 windows; 19 participants), and additional analyses of augmentation-seed and participant-partition variability, physical-model tuning, local-axis sensitivity, matched relative rotations, and disjoint calibration. Random-axis averages can conceal marked direction-dependent errors. Mathematical coordinate-frame rotations do not establish tolerance to physical sensor remounting. Original raw Camargo HDF5 recordings are publicly available from the source provider and are not redistributed.",
+  "description": "Reproducibility archive for the analysis of two-sensor gait-kinematics estimation under imposed sensor-frame rotations. The release preserves the frozen virtual-IMU input (747 gait cycles from 138 participants), original Ridge model code, and external physical-IMU protocol summaries (248 windows from 19 participants). Expanded analyses examine augmentation-seed and participant-partition stability, walking-speed ablation, nested physical-cohort regularization, directional and matched-relative-angle perturbations, and calibration estimated from records disjoint from evaluation. The directional analyses show that the same relative rotation magnitude can yield substantially different errors depending on the local rotation axis and sensor configuration. Post-rotation frame calibration can reduce adverse errors with an accuracy cost in the unrotated condition. The two ZIP files under r2_reanalysis/artifacts contain the later-stage executed code and detailed analysis results. Physical remounting experiments and raw C3D-to-derived-input reconstruction are not claimed. The original raw Camargo dataset is available from the source repository and is not redistributed.",
   "creators": [
     {
       "name": "Lima Júnior, Sérgio de Nazaré Rodrigues",
@@ -22,13 +22,14 @@
   "access_right": "open",
   "upload_type": "software",
   "keywords": [
-    "gait kinematics",
-    "inertial measurement units",
+    "IMU",
+    "gait analysis",
     "sensor-frame rotation",
     "directional sensitivity",
     "Ridge regression",
     "frame calibration",
-    "wearable measurement",
+    "wearable sensors",
+    "measurement robustness",
     "reproducibility"
   ],
   "license": "mit",
